@@ -1,0 +1,315 @@
+$green : #57992b;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: blueviolet;
+
+}
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+}
+
+ul li, ol {
+	list-style-type: none;
+}
+
+main, footer {
+	width: 1100px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+
+/* ---header - */
+
+header {
+	width: 1100px;
+	height: 160px;
+	margin: 0 auto;
+	background-color: white;
+	overflow: hidden;
+	.top {
+		display: flex;
+		justify-content: space-between;
+	}
+	&:after {
+		display: block;
+		content: "" ;
+		clear: both;
+	}
+	.navbar {
+		margin-bottom: 6px;
+		ul {
+			
+			display: flex;
+			justify-content: center;
+		}
+		li{
+			margin-left: 25px; 
+		}
+		
+		a {
+			color: $green;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-style: italic;
+			letter-spacing: 2px;
+			font-size: 15.5px;
+			&:hover {
+				color: red;
+			}
+		}
+	}
+	.tel {
+		color: $green;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: 2px;
+		font-size: 20px;
+		text-align: right;
+	}
+	#shape-1 {
+		height: 17px;
+		width: 1050px;
+		background: $green;
+		padding: 0;
+	}
+	#shape-2 {
+		position: relative;
+		top : -40px;
+		left: 750px;
+		height: 17px;
+		width: 320px;
+		background: $green;
+		padding: 0;
+		transform: skew(-45deg);
+	}
+}
+
+main {
+	background: url("../images/bg_02.png") top left no-repeat, white;
+		overflow: hidden;
+
+	section ul{
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		margin: 40px 0 50px 0;
+		li {
+			position: relative;
+			width: (1000px-62px)/4;
+			height: 128px;
+			background: rgba( 255, 255, 255, 0.5); ;
+		}
+		a {
+			display: block;
+			position: absolute;
+			bottom: -15px;
+			width: 228px;
+			text-decoration: none;
+			color: $green;
+			font-size: 18px;
+			font-weight: bold;
+			background: rgba(255, 255, 255, 0.7);
+			padding: 15px;
+			&:hover {
+				background: $green;
+				color: white;
+			}
+		}
+		img {
+			position: absolute;
+			left: 20px;
+			top: -40px;
+		}
+	}
+}
+
+article {
+
+	h1 {
+		color: #558e30;
+		text-transform: uppercase;
+	}
+	
+	p {
+		color: #8f5d46;
+		font-size: 14px;
+		margin-bottom: 30px;
+
+	}
+	
+	p:first-of-type {
+		color: #558e30;
+	}
+}
+
+#shape-4 {
+		height: 17px;
+		width: 1050px;
+		background: #954a13;
+		padding: 0;
+		position: relative;
+		top : -10px;
+		left: -50px;
+	
+	}
+#shape-5 {
+		position: relative;
+		top : -20px;
+		left: -62px;
+		height: 25px;
+		width: 745px;
+		background: #954a13;
+		padding: 0;
+		transform: skew(-45deg);
+}
+footer {
+	height: 110px;
+	background: #f0e1a0;
+	div {
+		&:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	a {
+		float: left;
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: italic;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	.footer-nav {
+		margin-bottom: 10px;
+		a {
+		margin-right: 20px;
+		text-transform: uppercase;
+		}
+	}
+	.birds {
+		a {
+			margin-right: 10px;
+			font-size: 11.44px;
+		}
+	}
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);	
+}
+form {
+	position: relative;
+	background: $green;
+	margin: 0 auto;
+	padding: 40px;
+	height: 350px;
+	width: 500px;
+	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	div {
+		display: flex;
+		margin-bottom: 10px;
+		justify-content: space-between;
+		margin: 20px 0;
+	}
+
+	p {
+		color: white;
+	}
+	input {
+		border: 2px solid yellow;
+		border-radius: 50px;
+		width: 70%;
+		font-size: 20px;
+		padding: 15px;
+		height: 30px;
+	}
+	input[type="submit"] {
+		background: white;
+		color: green;
+		height: 30px;
+		width: 120px;
+		border: 2px solid yellow;
+		border-radius: 50px;
+		margin: 20px auto 0 auto;
+		padding: 0px;
+
+	}
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		color: greenyellow;
+		font-size: 35px;
+		&:hover, &:focus {
+			color: white;
+			cursor: pointer;
+		}
+	}
+	#wait {
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
